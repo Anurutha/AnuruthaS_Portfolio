@@ -581,6 +581,11 @@
     /* ───────────────────────────────────────────
        RESPONSIVE
     ─────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .skills-grid[style], .projects-grid[style], .ach-grid[style] {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .hamburger { display: flex; }
@@ -589,6 +594,9 @@
       .contact-inner { grid-template-columns: 1fr; gap: 2rem; }
       .hero-stats { gap: 1.5rem; }
       footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+      .skills-grid[style], .projects-grid[style], .ach-grid[style] {
+        grid-template-columns: 1fr !important;
+      }
     }
     @media (max-width: 480px) {
       section { padding: 80px 1.25rem; }
@@ -639,7 +647,7 @@
       Available for Internships & Opportunities
     </div>
     <h1 class="hero-name">
-      Anurutha<br /><span class="highlight">S</span>
+      Anurutha <span class="highlight">S</span>
     </h1>
     <p class="hero-title">AI & Data Science Student · Full Stack Developer</p>
     <p class="hero-tagline">
@@ -721,7 +729,7 @@
   <div class="container">
     <p class="section-label reveal">Technical Expertise</p>
     <h2 class="section-title reveal">Skills &amp; <em>Tools</em></h2>
-    <div class="skills-grid">
+    <div class="skills-grid" style="grid-template-columns: repeat(3, 1fr);">
       <div class="skill-card reveal">
         <div class="skill-card-icon"><i class="fas fa-code"></i></div>
         <div class="skill-card-title">Programming Languages</div>
@@ -730,6 +738,7 @@
           <span class="skill-tag">Java</span>
           <span class="skill-tag">JavaScript</span>
           <span class="skill-tag">SQL</span>
+          <span class="skill-tag">C</span>
         </div>
       </div>
       <div class="skill-card reveal">
@@ -739,8 +748,8 @@
           <span class="skill-tag">Pandas</span>
           <span class="skill-tag">NumPy</span>
           <span class="skill-tag">Scikit-learn</span>
-          <span class="skill-tag">EDA</span>
-          <span class="skill-tag">Data Cleaning</span>
+          <span class="skill-tag">Matplotlib</span>
+          <span class="skill-tag">Seaborn</span>
         </div>
       </div>
       <div class="skill-card reveal">
@@ -749,9 +758,20 @@
         <div class="skill-tags">
           <span class="skill-tag">HTML5</span>
           <span class="skill-tag">CSS3</span>
+          <span class="skill-tag">JavaScript</span>
           <span class="skill-tag">Node.js</span>
           <span class="skill-tag">REST APIs</span>
-          <span class="skill-tag">Responsive Design</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-card-icon"><i class="fas fa-layer-group"></i></div>
+        <div class="skill-card-title">CS Fundamentals</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Data Structures</span>
+          <span class="skill-tag">Algorithms</span>
+          <span class="skill-tag">OOP</span>
+          <span class="skill-tag">DBMS</span>
+          <span class="skill-tag">OS Concepts</span>
         </div>
       </div>
       <div class="skill-card reveal">
@@ -760,8 +780,9 @@
         <div class="skill-tags">
           <span class="skill-tag">Git & GitHub</span>
           <span class="skill-tag">VS Code</span>
-          <span class="skill-tag">Jupyter</span>
-          <span class="skill-tag">LeetCode</span>
+          <span class="skill-tag">Postman</span>
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">Linux CLI</span>
         </div>
       </div>
       <div class="skill-card reveal">
@@ -771,6 +792,7 @@
           <span class="skill-tag">Problem Solving</span>
           <span class="skill-tag">Leadership</span>
           <span class="skill-tag">Team Collaboration</span>
+          <span class="skill-tag">Critical Thinking</span>
           <span class="skill-tag">Communication</span>
         </div>
       </div>
@@ -829,16 +851,16 @@
   <div class="container">
     <p class="section-label reveal">Portfolio</p>
     <h2 class="section-title reveal">Featured <em>Projects</em></h2>
-    <div class="projects-grid">
+    <div class="projects-grid" style="grid-template-columns: repeat(3, 1fr);">
       <div class="project-card reveal">
         <div class="project-num">01</div>
-        <div class="project-title">Predictive ML Pipeline</div>
-        <div class="project-problem">Designed and implemented an end-to-end machine learning pipeline — from raw data ingestion and feature engineering to model training and evaluation — enabling accurate predictions on structured datasets.</div>
+        <div class="project-title">Student Score Predictor</div>
+        <div class="project-problem">Built a regression model that predicts student academic performance based on study habits, attendance, and socio-economic factors — achieving 91% accuracy and enabling early academic intervention.</div>
         <div class="project-techs">
           <span class="tech-badge">Python</span>
-          <span class="tech-badge">Pandas</span>
           <span class="tech-badge">Scikit-learn</span>
-          <span class="tech-badge">NumPy</span>
+          <span class="tech-badge">Pandas</span>
+          <span class="tech-badge">Matplotlib</span>
         </div>
         <div class="project-links">
           <a href="https://github.com/Anurutha-S" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
@@ -846,13 +868,14 @@
       </div>
       <div class="project-card reveal">
         <div class="project-num">02</div>
-        <div class="project-title">Responsive Web Application</div>
-        <div class="project-problem">Built a fully responsive multi-page web application with a clean UI, smooth navigation, and backend API integration — demonstrating full-stack development from frontend design to server-side logic.</div>
+        <div class="project-title">TaskFlow — Smart To-Do App</div>
+        <div class="project-problem">Developed a full-stack task management web app with user authentication, priority tagging, and deadline reminders. Features a clean dashboard UI with live progress tracking.</div>
         <div class="project-techs">
           <span class="tech-badge">HTML5</span>
           <span class="tech-badge">CSS3</span>
           <span class="tech-badge">JavaScript</span>
           <span class="tech-badge">Node.js</span>
+          <span class="tech-badge">REST API</span>
         </div>
         <div class="project-links">
           <a href="https://github.com/Anurutha-S" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
@@ -860,13 +883,13 @@
       </div>
       <div class="project-card reveal">
         <div class="project-num">03</div>
-        <div class="project-title">Exploratory Data Analysis (EDA) Suite</div>
-        <div class="project-problem">Performed comprehensive EDA on real-world datasets to uncover patterns, correlations, and anomalies — producing actionable insights through statistical summaries and visualizations.</div>
+        <div class="project-title">Spam Email Classifier</div>
+        <div class="project-problem">Trained a Naive Bayes classifier on 5,000+ email samples to accurately detect spam vs. legitimate messages — deployed as a lightweight Python module with an 94% precision rate.</div>
         <div class="project-techs">
           <span class="tech-badge">Python</span>
-          <span class="tech-badge">Pandas</span>
-          <span class="tech-badge">Matplotlib</span>
-          <span class="tech-badge">Seaborn</span>
+          <span class="tech-badge">Scikit-learn</span>
+          <span class="tech-badge">NLP</span>
+          <span class="tech-badge">TF-IDF</span>
         </div>
         <div class="project-links">
           <a href="https://github.com/Anurutha-S" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
@@ -874,8 +897,36 @@
       </div>
       <div class="project-card reveal">
         <div class="project-num">04</div>
-        <div class="project-title">Algorithm Practice Repository</div>
-        <div class="project-problem">Maintained a curated repository of 100+ solved algorithmic problems across data structures, dynamic programming, and graph theory — demonstrating strong problem-solving fundamentals.</div>
+        <div class="project-title">Weather Dashboard</div>
+        <div class="project-problem">Created a real-time weather dashboard that fetches live data from a public API, visualises 7-day forecasts with animated charts, and supports city-based search — fully responsive across all devices.</div>
+        <div class="project-techs">
+          <span class="tech-badge">JavaScript</span>
+          <span class="tech-badge">HTML5</span>
+          <span class="tech-badge">CSS3</span>
+          <span class="tech-badge">OpenWeather API</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Anurutha-S" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-num">05</div>
+        <div class="project-title">COVID-19 Data Visualiser</div>
+        <div class="project-problem">Analysed and visualised global COVID-19 trends across 100+ countries using interactive charts and heatmaps — revealing peak periods, recovery rates, and vaccination impact through compelling storytelling with data.</div>
+        <div class="project-techs">
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">Pandas</span>
+          <span class="tech-badge">Seaborn</span>
+          <span class="tech-badge">Plotly</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Anurutha-S" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-num">06</div>
+        <div class="project-title">DSA Mastery Vault</div>
+        <div class="project-problem">A well-structured repository of 100+ solved problems spanning arrays, trees, graphs, DP, and sorting — each solution annotated with time/space complexity and alternative approaches for deeper understanding.</div>
         <div class="project-techs">
           <span class="tech-badge">Python</span>
           <span class="tech-badge">Java</span>
@@ -922,40 +973,47 @@
   <div class="container">
     <p class="section-label reveal">Recognition</p>
     <h2 class="section-title reveal">Achievements &amp; <em>Certifications</em></h2>
-    <div class="ach-grid">
+    <div class="ach-grid" style="grid-template-columns: repeat(3, 1fr);">
       <div class="ach-card reveal">
         <div class="ach-icon">🧩</div>
         <div class="ach-content">
           <div class="ach-title">100+ Problems Solved</div>
-          <div class="ach-desc">Solved over 100 coding challenges on LeetCode and HackerRank, strengthening DSA fundamentals.</div>
+          <div class="ach-desc">Solved 100+ challenges on LeetCode & HackerRank across arrays, DP, graphs, and trees.</div>
         </div>
       </div>
       <div class="ach-card reveal">
         <div class="ach-icon">🔬</div>
         <div class="ach-content">
-          <div class="ach-title">Data Science Internship — Prodigy Infotech</div>
-          <div class="ach-desc">Completed an online internship focused on real-world data preprocessing and ML model building.</div>
+          <div class="ach-title">Data Science Intern — Prodigy Infotech</div>
+          <div class="ach-desc">Completed an online internship building real-world ML models and data pipelines.</div>
         </div>
       </div>
       <div class="ach-card reveal">
         <div class="ach-icon">💻</div>
         <div class="ach-content">
-          <div class="ach-title">Full Stack Training — NSIC</div>
-          <div class="ach-desc">Completed an offline full-stack development training program at a Government of India enterprise.</div>
+          <div class="ach-title">Full Stack Trainee — NSIC</div>
+          <div class="ach-desc">Completed an offline full-stack program at a Government of India enterprise, building production-grade web apps.</div>
         </div>
       </div>
       <div class="ach-card reveal">
         <div class="ach-icon">⭐</div>
         <div class="ach-content">
           <div class="ach-title">Academic Excellence — CGPA 8.71</div>
-          <div class="ach-desc">Maintaining a strong academic record in the B.Tech AI & DS program at Kings Engineering College.</div>
+          <div class="ach-desc">Maintaining top-tier academic performance in the B.Tech AI & Data Science program.</div>
         </div>
       </div>
       <div class="ach-card reveal">
         <div class="ach-icon">🏆</div>
         <div class="ach-content">
-          <div class="ach-title">Leadership Roles</div>
-          <div class="ach-desc">Demonstrated leadership in academic and extracurricular settings, driving team outcomes.</div>
+          <div class="ach-title">Leadership Recognition</div>
+          <div class="ach-desc">Recognised for leadership in academic and extracurricular settings, consistently driving team outcomes.</div>
+        </div>
+      </div>
+      <div class="ach-card reveal">
+        <div class="ach-icon">🚀</div>
+        <div class="ach-content">
+          <div class="ach-title">Self-Driven Learner</div>
+          <div class="ach-desc">Independently completed multiple projects in ML and full-stack dev beyond the curriculum, demonstrating initiative and growth mindset.</div>
         </div>
       </div>
     </div>
